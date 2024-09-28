@@ -1,0 +1,88 @@
+body{
+    background-color:rgb(238, 182, 255);
+    
+}
+
+header {
+    text-align:center;
+  }
+  
+  p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:120% ;
+  }
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:500%;
+}
+  h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 200%;
+    color: purple;
+  }
+  
+  #mySidenav a {
+    position:absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  #mySidenav a:hover {
+    left: 0;
+  }
+  
+  #main {
+    top: 20px;
+    background-color: #f23557;
+  }
+  
+  
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+ 
+  @layer reading-bar;
+  
+  @layer reading-bar {
+    html {
+        position: relative;
+    }
+    .reading-progress {
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 100vh);
+        z-index: -1;
+    }
+  
+    .reading-progress::before,
+    .reading-progress::after {
+        content: "";
+        top: 0;
+        left: -0.9%;
+        width: 101%;
+    }
+  
+    .reading-progress::after {
+        position: absolute;
+        height: 100%;
+        background: linear-gradient(to bottom left, #fff 50%, #fff0 50%);
+    }
+  
+    .reading-progress::before {
+        position: fixed;
+        height: 10px;
+        background: linear-gradient(#369, #396);
+    }
+  }
